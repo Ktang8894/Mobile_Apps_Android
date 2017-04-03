@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Project3</string>
+    <string name="main_perm_desc">Give A1 Permission</string>
+    <string name="main_perm_label">A1 Permission</string>
+</resources>

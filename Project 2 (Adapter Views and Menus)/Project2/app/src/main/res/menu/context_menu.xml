@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Play on Youtube"
+        android:id="@+id/play" />
+    <item android:title="Song Wikipedia"
+        android:id="@+id/songWiki" />
+    <item android:title="Artist on Wikipedia"
+        android:id="@+id/artistWiki" />
+</menu>

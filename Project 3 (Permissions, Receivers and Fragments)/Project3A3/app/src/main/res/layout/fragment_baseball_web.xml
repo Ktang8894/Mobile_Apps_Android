@@ -1,0 +1,13 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ktang20.project3a3.BaseballWebFragment">
+
+    <WebView
+        android:id="@+id/webView"
+        android:background="#ffffff"
+        android:layout_gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

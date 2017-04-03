@@ -1,0 +1,27 @@
+Design and implement an app implementing the following functionality. The app starts off with a main
+activity containing a welcome message and two buttons arranged vertically below the welcome message.
+The functionality of the two buttons is explained below.
+
+1. If the user selects the top button, your app uses an explicit intent to start a child activity, which contains
+a text editor window and a button. The text editor window is initially empty. The user then types some
+text. Embedded in the text could be a phone number in one of the following formats: “yyy-zzzz”,
+“(xxx) yyy-zzzz” or “(xxx)yyy-zzzz”. (All formats must be supported by your app.) When the text
+(possibly containing a phone number) is complete, the user will press the button. Now your app will
+look for a phone number embedded in the text typed by the user. If a phone number conforming to
+one of the above formats is found, your app will use an implicit intent to open the predefined dialer
+activity in the Phone app of your emulator, without dialing the number. If no phone numbers are
+found in the text typed by the user, no action is taken. If, however, there are multiple phone numbers
+in the text, only the first such number is chosen. In addition, before exiting the child activity sets a
+result code to be sent to the main activity. The main activity uses this result code to display a message
+indicating whether the child activity was successful in finding a phone number or not.
+
+2. If the user selects the bottom button, your app will use an implicit intent to start an activity in a
+browser contained in your emulator and open the Android documentation page:
+https://developer.android.com/index.html
+
+An app user should be able to use the predefined “back” button in the bottom left of the emulator’s
+window in order to navigate back from an app screen to previous app screens or the device’s home screen.
+
+Implementation notes. For this project use an Nexus 5 device running Marshmallow (API 23 that
+you downloaded for Homework 1). You are not required to provide backward compatibility with previous
+Android versions.

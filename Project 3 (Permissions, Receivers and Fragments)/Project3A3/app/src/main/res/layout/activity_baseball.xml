@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ktang20.project3a3.BaseballActivity"
+    android:id="@+id/container">
+
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="ktang20.project3a3.BaseballWebFragment"
+        android:layout_width="385dp"
+        android:layout_height="510dp"
+        android:layout_gravity="right"
+        android:background="#ffffff"
+        tools:layout="@layout/fragment_baseball_web" />
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="ktang20.project3a3.BaseballListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        tools:layout="@layout/fragment_baseball_list" />
+
+</FrameLayout>
