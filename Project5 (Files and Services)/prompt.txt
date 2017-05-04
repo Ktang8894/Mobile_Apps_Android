@@ -1,0 +1,26 @@
+You are to code two Android apps. The first app, named FunCenter stores a number of pictures and
+audio clips, such as songs or other recordings. The pictures are numbered from 1 through m and the clips
+are numbered 1 through n, where m and n are the total number of clips with m, n ≥ 3. The app contains
+a service intended to be bound (as opposed to started), which exposes an API for clients to use. The API
+supports two kinds of functionality. The first kind of functionality will support requests for pictures by the
+clients. When a client bound to the service requests a picture, the picture will be returned to the client, which
+will then display the picture. The second fuctionality involves playing one of the audio clips. A client can
+start playing a clip, pause the clip, resume the clip and stop the playback altogether. This application should
+include at least 3 pictures and 3 audio clips of variable duration. You are at liberty to choose the duration of
+the clips; however, the duration of Clip 1 should be at least 30 seconds and no more than 3 minutes.
+The second app, FunClient consists of an activity that exposes functionality for using the FunCenter and
+binds to the service for either playing an audio clip or downloading a picture. Your interface should mininally
+include appropriate View elements for the following functionality:
+(1) Requesting a picture (by number)
+(2) Displaying a picture 
+(3) Playing a given clip (by number)
+(4) Pausing the playback
+(5) Resuming the playback
+(6) Stopping the player
+When the client activity is stopped, the service should continue
+playing; however, the service should be unbound and stopped if the activity is destroyed.
+In addition the FunClient app keeps track of all requests that it makes while bound to the service. The
+list of requests is displayed in an appropriate scrollable view on the app’s display. When the FunClient
+app is selected by the user, it will first display the list of requests from the previous user session (i.e., app
+execution). New requests will be appended to the current list; however, the interactive user can choose to
+erase the list by selecting an appropriate button in the app’s interface
