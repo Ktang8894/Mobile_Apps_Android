@@ -1,0 +1,30 @@
+In this project you will design and code a strategy game called Three Men Morris (TMM) as an Android app.
+The game uses a 3-by-3 board. Two players start with 3 pieces each; the board is initially empty. Next, the
+two players take turns placing their three pieces in an empty location in the board. The goal of the game is
+for each player to arrange her three pieces in a line either horizontally or vertically (but not diagonally). If
+there is no winner after the players have placed their pieces on the board, players will take turns moving one
+of their pieces to an empty location on the board. Pieces can move to any empty location on the board, not
+just adjacent locations. Additional information on TMM can be found on the Wikipedia TMM page.
+
+Your implementation will have two Java worker threads play against each other. The UI thread is responsible
+for mainting and updating the display, and for for creating and starting the two worker threads. Each
+thread will take turns taking the following actions:
+1. Waiting for a short time (1-2 seconds) in order for a human viewer to notice the previous move on the
+display.
+2. Figuring out the next move of the player associated with this thread.
+3. Communicating the move to the UI thread, which will then update the device’s display.
+4. Waiting for the opponent to complete their move.
+
+The UI thread is specifically responsible for the following functionality:
+1. Showing the initial display (i.e., empty 3-by-3 board).
+2. Updating the TMM board after latest move by the worker threads.
+3. Displaying a button to start the game. Pressing this button while a game is in progress will void the
+current game and start a new game from scratch.
+4. Receiving notifications of moves by the worker threads.
+5. Informing each worker thread of its opponent’s move. This will also signal the thread that it should
+make the next move.
+6. Checking on the status of the game, by determining whether one player has won, the game has ended
+in a tie, or the game needs to continue.
+7. Displaying an appropriate message to indicate the outcome of each game.
+8. Signaling the two worker threads that the game is over; the two threads should stop their execution as a
+result of this action.
