@@ -17,22 +17,11 @@ public class A2 extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        // permissionCheck = ContextCompat.checkSelfPermission(context, "edu.uic.cs478.project3");
-
-   //     if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-   //         Toast.makeText(context, "ACCESS DENIED", Toast.LENGTH_SHORT).show();
-      //  }
-     //  else {
-           // Toast.makeText(context, "ACCESS GRANTED", Toast.LENGTH_SHORT).show();
-            //    int result = context.checkCallingPermission("edu.uic.cs478.project3");
-            //   if (PackageManager.PERMISSION_GRANTED == result) {
             if (intent.getAction() == "p3_basketball")
                 Toast.makeText(context, "A2: Basketball Selected", Toast.LENGTH_SHORT).show();
 
             if (intent.getAction() == "p3_baseball")
                 Toast.makeText(context, "A2: Baseball Selected", Toast.LENGTH_SHORT).show();
-            //   }
-        //}
 
     }
 }
